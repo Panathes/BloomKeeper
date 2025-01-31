@@ -25,15 +25,6 @@ export class UsersService {
     return this.usersRepository.findOneBy({ id });
   }
 
-//   async update(id: number, name: string, email: string): Promise<User> {
-//     const article = await this.usersRepository.findOne(id);
-//     if (article) {
-//       article.name = name;
-//       article.email = email;
-//       return await this.usersRepository.save(article);
-//     }
-//   } 
-
   async remove(id: number): Promise<void> {
     await this.usersRepository.delete(id);
   }
